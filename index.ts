@@ -3,5 +3,5 @@ addEventListener("fetch", async (event) => {
   const headers = { "cache-control": "public, max-age=14400", 'content-type': 'text/javascript' }
   response = new Response(response.body, { ...response, headers })
 
-  return response;
+  event.respondWith(response)
 });
